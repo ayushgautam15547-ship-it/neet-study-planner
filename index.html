@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NEET Study Planner</title>
+<style>
+body {
+  font-family: Arial;
+  background: #f1f5f9;
+  padding: 25px;
+}
+h1 { color: #2457d6; }
+button {
+  padding: 10px;
+  background: #2457d6;
+  color: white;
+  border: none;
+}
+</style>
+</head>
+<body>
+<h1>My NEET Study Planner</h1>
+<p>Plan your daily NEET preparation.</p>
+
+<input id="task" placeholder="Enter study task">
+<button onclick="addTask()">Add Task</button>
+
+<ul id="list"></ul>
+
+<script>
+function addTask() {
+  let value = document.getElementById("task").value;
+  if(value.trim() === "") return;
+  let li = document.createElement("li");
+  li.textContent = value;
+  document.getElementById("list").appendChild(li);
+  document.getElementById("task").value = "";
+}
+</script>
+</body>
+</html>

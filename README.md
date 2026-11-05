@@ -1,1 +1,0 @@
-# neet-study-planner
